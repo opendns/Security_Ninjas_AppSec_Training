@@ -1,0 +1,214 @@
+/*
+	Miniport by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	body,input,textarea,select
+	{
+		line-height: 1.75em;
+		font-size: 10pt;
+		letter-spacing: 0;
+	}
+
+	h1, h2, h3, h4, h5, h6
+	{
+		font-size: 1.25em;
+		margin: 0 0 0.4em 0;
+	}
+
+	h1
+	{
+		font-size: 2.25em;
+		line-height: 1.25em;
+	}
+	
+	h2
+	{
+	}
+
+	header
+	{
+		margin: 0 0 2em 0;
+	}
+	
+		header > p
+		{
+			font-size: 1.25em;
+		}
+
+	footer
+	{
+		margin: 2.5em 0 0 0;
+	}
+	
+		footer > p
+		{
+			font-size: 1.25em;
+		}
+
+	hr
+	{
+		margin: 1.5em 0 2em 0;
+	}
+
+	/* Section/Article */
+	
+		section,
+		article
+		{
+			clear: both;
+		}
+
+	/* Button */
+
+		input[type="button"],
+		input[type="submit"],
+		input[type="reset"],
+		.button
+		{
+			text-align: center;
+			font-size: 1.2em;
+			width: 100%;
+			padding: 1em 0 1em 0;
+		}
+
+	/* List */
+
+		ul
+		{
+		}
+
+			ul.social
+			{
+				padding: 1em 0.5em 0 0.5em;
+			}
+
+				ul.social li
+				{
+					margin: 0.5em 0.5em 0.5em 0.5em;
+				}
+
+					ul.social li a
+					{
+						top: 0 !important;
+					}
+
+						ul.social li a:before
+						{
+							background-color: transparent !important;
+						}
+
+			ul.actions
+			{
+				margin: 0;
+			}
+
+				ul.actions li
+				{
+					display: block;
+					margin: 10px 0 0 0;
+				}
+				
+					ul.actions li:first-child
+					{
+						margin-top: 0;
+					}
+
+	/* Box */
+
+		.box
+		{
+			padding: 30px 20px 30px 20px;
+			margin: 0 0 20px 0 !important;
+		}
+
+			.box h3
+			{
+				margin-bottom: 0.25em;
+			}
+
+			.box .image.centered
+			{
+				margin-bottom: 1em;
+			}
+
+			.box .image.featured
+			{
+				position: relative;
+				left: 20px;
+				top: 20px;
+				margin: -50px 0 50px -40px;
+				width: auto;
+			}
+
+/*********************************************************************************/
+/* Wrappers                                                                      */
+/*********************************************************************************/
+
+	.wrapper
+	{
+		padding: 3em 15px 3em 15px;
+		text-align: center;
+	}
+
+		.wrapper.first
+		{
+			padding-top: 5em;
+		}
+	
+/*********************************************************************************/
+/* Nav                                                                           */
+/*********************************************************************************/
+
+	#nav
+	{
+	}
+	
+		#nav a
+		{
+			padding: 0.5em;
+		}
+		
+/*********************************************************************************/
+/* Articles                                                                      */
+/*********************************************************************************/
+
+	#top
+	{
+	}
+
+		#top .image
+		{
+			width: 70%;
+			height: auto;
+			margin: 0 auto 1.75em auto;
+		}
+	
+	#contact
+	{
+	}
+	
+		#contact footer
+		{
+			margin: 0;
+		}
+		
+/*********************************************************************************/
+/* Copyright                                                                     */
+/*********************************************************************************/
+
+	#copyright
+	{
+		font-size: 1em;
+		margin: 0;
+	}
+	
+		#copyright li
+		{
+			display: block;
+		}

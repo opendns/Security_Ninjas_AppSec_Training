@@ -1,0 +1,34 @@
+/*
+	Miniport by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+*/
+
+/*********************************************************************************/
+/* Basic                                                                         */
+/*********************************************************************************/
+
+	/* Button */
+
+		input[type="button"],
+		input[type="submit"],
+		input[type="reset"],
+		.button
+		{
+			background-image: url('images/grad0-20.svg');
+		}
+		
+	/* List */
+
+		ul
+		{
+		}
+
+			ul.social
+			{
+			}
+			
+				ul.social li a:before
+				{
+					background-image: url('images/grad0-20.svg');
+				}
