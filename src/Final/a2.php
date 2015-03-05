@@ -98,7 +98,7 @@
 							<li><H5 style="cursor: pointer" onclick="toggleBlock(this, 'hint1');"> Hint 1 </H5>
 							<DIV id="hint1" style="display:none">
 							<P>
-							Login and user1 and see how Session Management is being done
+							Login as user1 and see how Session Management is being done
 							</P>
 							</DIV></li>
 
