@@ -71,7 +71,7 @@
 							    	<?php
 									$file = fopen("user1.txt", "r") or die("Unable to open file!");
 									echo fgets($file);
-									fclose($myfile);
+									fclose($file);
 									?>
 							    </td>
 							    <td><form id="ctrl" name="ctrl">
@@ -94,7 +94,7 @@
 							    	<?php
 									$file = fopen("user2.txt", "r") or die("Unable to open file!");
 									echo fgets($file);
-									fclose($myfile);
+									fclose($file);
 									?>
 							    </td>
 							    <td><form id="ctrl" name="ctrl">
