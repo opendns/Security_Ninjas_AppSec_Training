@@ -69,6 +69,7 @@
 												//parse row and print column
 													$name=preg_split("/#@/", $rows[$r]);
 													$html .= '<td>' . '<b>' .$name[0]. '</b>' . '</td>';
+													$name[1] = isset($name[1]) ? $name[1] : ' ';
 													$html .= '<td>' .$name[1]. '</td>';
 
 												$html .= '</tr>';
