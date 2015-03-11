@@ -21,12 +21,12 @@ Setup:
 2. Make sure docker has been installed correctly by running ‘docker version’.
 
 3. Start the Application Security Training container by running the following command (I chose port 8899 to avoid port allocation conflicts):
-    docker run --detach -p 8899:80 opendns/security-ninjas
+    'docker run --detach -p 8899:80 opendns/security-ninjas'
 
 4. Get the IP address of your container:
     In my case the command was ‘boot2docker ip’ as I was running docker using boot2docker
 
-5. Go to your web browser and enter <IP address from step 4>:8899
+5. Go to your web browser and enter {IP address from step 4}:8899
 
 6. The training should be running now.
 	
@@ -44,7 +44,7 @@ If for some reason you are not able to run the training in a docker container, y
 
 2. Download the source code from here and put it in the directory where the web server looks for files to serve.
 
-3. In the Security Ninjas sub-directory, change text file permissions - chmod 777 *.txt
+3. In the Security Ninjas sub-directory, change text file permissions - 'chmod 777 *.txt'
 
 4. Make sure WHOIS is installed on the web server.
 
