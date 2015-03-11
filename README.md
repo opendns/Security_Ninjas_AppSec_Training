@@ -67,3 +67,6 @@ The following steps are optional but recommended:
 
 7. Run the training in Firefox.
 
+---
+
+CSS credits: html5up.net
