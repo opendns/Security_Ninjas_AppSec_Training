@@ -7,67 +7,58 @@ This hands-on training lab consists of 10 fun real world like hacking exercises,
 
 Making the Hands-on Lab Work:
 
+ 
+
 Docker instructions
 
-I would highly recommend that you run the training in a docker container because of the following:
+ I would highly recommend that you run the training in a docker container because of the following:
 
-1. Setting up and destroying the environment would be super easy and quick.
-
-2. The docker container would be sandboxed which means that the vulnerable application wouldn’t be able to harm the host OS.
-
-
+Setting up and destroying the environment would be super easy and quick.
+The docker container would be sandboxed which means that the vulnerable application wouldn’t be able to harm the host OS.
 Setup:
 
-1. Setup docker https://docs.docker.com/installation/. There are many ways to do this depending on the OS you use.
+Setup docker https://docs.docker.com/installation/. There are many ways to do this depending on the OS you use.
+Make sure docker has been installed correctly by running ‘docker version’.
+Start the Application Security Training container by running the following command (I chose port 8899 to avoid port allocation conflicts): 'docker run -d -p 8899:80 opendns/security-ninjas'.
+Get the IP address of your container. In my case the command was ‘boot2docker ip’ as I was running docker using boot2docker.
+Go to your web browser and enter <IP address from step 4>:8899.
+The training should be running now and you should see the home page in your browser window.
+Kill the container after you are done.
+Go back to the terminal and type ‘docker ps’. Get the container id of the training.
+Then run ‘docker kill {container id}’.
+ 
 
-2. Make sure docker has been installed correctly by running ‘docker version’.
+Running it using a web server 
 
-3. Start the Application Security Training container by running the following command (I chose port 8899 to avoid port allocation conflicts):
-    'docker run --detach -p 8899:80 opendns/security-ninjas'
+If for some reason you are not able to run the training in a docker container, you may also run it using a web server.
 
-4. Get the IP address of your container:
-    In my case the command was ‘boot2docker ip’ as I was running docker using boot2docker
+Download a web server (like Apache) and PHP.
+Download the source code from here and put it in the directory where the web server looks for files to serve.
+In the Security Ninjas sub-directory, change text file permissions: 'chmod 777 *.txt'
+Make sure WHOIS is installed on the web server.
+Start the web server and reach the application from your web browser.
+ 
 
-5. Go to your web browser and enter {IP address from step 4}:8899
+The following steps are optional but recommended (for both Docker and web server):
 
-6. The training should be running now.
-	
-7. Kill the container after you are done.
-    Go back to the terminal and type ‘docker ps’. Get the container id of the training
+Install Firefox.
+Install the FoxyProxy plugin for Firefox
+In select mode: Use proxy "Default" for all URLs.
+Configure the Default proxy to use 127.0.0.1:8080.
+You can delete or disable this plugin after the exercise.
+Install Burp Suite free from http://portswigger.net/burp/download.html. You could use some other proxy tool as well.
+You can get some basic Burp Suite tutorials from http://portswigger.net/burp/tutorials/.
+You can turn the proxy off for most of the exercises but for some, having the intercept on would make it much easier to inspect and alter the HTTP requests.
+Run the training in Firefox.
+ 
 
-8. Then run ‘docker kill {container id}’
+Suggestions or Comments?
 
+We would love to get some feedback! You can reach me directly at shruti@opendns.com.
 
-Running it using a web server:
-
-If for some reason you are not able to run the training in a docker container, you may also run it using a web server. 
-
-1. Download a web server (like Apache) and PHP.
-
-2. Download the source code from here and put it in the directory where the web server looks for files to serve.
-
-3. In the Security Ninjas sub-directory, change text file permissions - 'chmod 777 *.txt'
-
-4. Make sure WHOIS is installed on the web server.
-
-5. Start the web server and reach the application from your web browser.
+Happy hacking!
 
 
-The following steps are optional but recommended:
-
-1. Install Firefox.
-
-2. Install the FoxyProxy plugin for Firefox and configure it to proxy using 127.0.0.1:8080
-
-3. You can delete or disable this plugin after the exercise.
-
-4. Install Burp Suite free from http://portswigger.net/burp/download.html. You could use some other proxy tool as well.
-
-5. You can get some basic Burp Suite tutorials from http://portswigger.net/burp/tutorials/
-
-6. You can turn the proxy off for most of the exercises but for some, having the intercept on would make it much easier to inspect and alter the HTTP requests.
-
-7. Run the training in Firefox.
 
 ---
 
