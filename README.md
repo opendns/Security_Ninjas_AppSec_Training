@@ -72,5 +72,10 @@ The following steps are optional but recommended:
 7. Run the training in Firefox.
 
 ---
+Suggestions or Comments? 
 
+We would love to get some feedback! You can reach me directly at shruti@opendns.com. Happy hacking!
+
+
+---
 CSS credits: html5up.net
