@@ -80,7 +80,14 @@
 							<P>
 							Enter any malicious JavaScript code. e.g., &lt;script&gt;window.location.href = &quot;http://opendns.com&quot;;&lt;/script&gt;
 							</P>
-							
+
+							<h4>Why?</h4>
+							<p style="text-align:left">
+								The user name parameter at <a href="https://github.com/opendns/Security_Ninjas_AppSec_Training/blob/master/src/Final/lucky.php#L51">lucky.php</a> 
+								(line 51) is echoed back to the page without being sanitized and is vulnerable to <a href="https://www.owasp.org/index.php/Cross-site_Scripting_%28XSS%29">XSS</a>. This can be 
+								prevented by <a href="https://www.owasp.org/index.php/XSS_%28Cross_Site_Scripting%29_Prevention_Cheat_Sheet">encoding output.</a>.
+							</p>
+
 							</DIV></li>
 							
 							</ul>

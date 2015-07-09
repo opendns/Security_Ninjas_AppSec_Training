@@ -108,7 +108,13 @@
 							<P>
 							Enter any malicious javascript code. e.g., &lt;script&gt;window.location.href = &quot;http://opendns.com&quot;;&lt;/script&gt;
 							</P>
-							
+
+							<h4>Why?</h4>
+							<p style="text-align:left">
+								This page is slightly better in that it performs some client side validation of user input (see the validateForm function in <a href="https://github.com/opendns/Security_Ninjas_AppSec_Training/blob/master/src/Final/stored.html#L23">stored.html</a>). But remember that these checks are trivially defeated by disabling javascript or using a web proxy such as Burp Suite. The name and username parameters in the <a href="https://github.com/opendns/Security_Ninjas_AppSec_Training/blob/master/src/Final/store_users.php#L52">store_users.php</a> file (line 52) are written directly to the file comments.txt without sanitizing output against a whitelist server side.
+								These comments are echoed back from whatever the <a href="https://github.com/opendns/Security_Ninjas_AppSec_Training/blob/master/src/Final/fetch_users.php#L83">fetch_users.php</a> (line 83) file returns. The fetch_users does no output encoding or replacing of HTML control characters. XSS can be mitigated by <a href="https://www.owasp.org/index.php/Data_Validation">sanitizing user input</a> server side and <a href="https://www.owasp.org/index.php/XSS_%28Cross_Site_Scripting%29_Prevention_Cheat_Sheet">encoding output</a>.
+							</p>
+
 							</DIV></li>
 							
 							</ul>
