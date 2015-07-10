@@ -90,6 +90,11 @@
 							Fetch sensitive files by changing the fname parameter e.g., fname=../../../../../etc/passwd
 							</P>
 							
+							<h4>Why?</h4>
+							<p style="text-align:left">
+								The include method at <a href="https://github.com/opendns/Security_Ninjas_AppSec_Training/blob/master/src/Final/a5.php#L52">a5.php</a> (line 52) takes in user input without any sort of sanitization and displays that file to the user. Any file the web server has permission to view, the end user now does as well. In addition to hardening server and environment configurations, ensure that user input is not used without sanitization and or specify allowed include files. OWASP has a concise summary of Security Misconfigurations <a href="https://www.owasp.org/index.php/Top_10_2013-A5-Security_Misconfiguration">here</a>.
+							</p>
+
 							</DIV></li>
 							
 							</ul>
