@@ -96,6 +96,11 @@
 							Edit redirect_to to opendns.com.{bad URL} <br> e.g. opendns.com.internetbadguys.com
 							</P>
 							
+							<h4>Why?</h4>
+							<p style="text-align:left">
+								The code in <a href="https://github.com/opendns/Security_Ninjas_AppSec_Training/blob/master/src/Final/check_bots.php#L12">check_bots.php</a> simply checks to see that the redirect location string of the captcha form <i>contains</i> opendns.com. As the Solution above points out, a malicious user could simply add a subdomain of opendns.com to their own domain, and the validation would succeed. Using burp, modify the redirect parameter to "google.com/?q=opendns.com" and see for yourself! OWASP has a concise summary of Unvalidated Redirects and Forwards <a href="https://www.owasp.org/index.php/Top_10_2013-A10-Unvalidated_Redirects_and_Forwards">here</a>.
+							</p>
+
 							</DIV></li>
 							
 							</ul>
