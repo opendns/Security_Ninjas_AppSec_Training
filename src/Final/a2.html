@@ -95,7 +95,11 @@
 							<P>
 							sessionID cookie is a SHA1 hash of the username. Replace SHA1(user1) in the cookie by SHA1(user2) to authenticate as user2. <br>i.e.  sessionID=a1881c06eec96db9901c7bbfe41c42a3f08e9cb4
 							</P>
-							
+
+							<h4>Why?</h4>
+							<p style="text-align:left">
+								Take a look at the GET method in <a href="https://github.com/opendns/Security_Ninjas_AppSec_Training/blob/master/src/Final/a2.php#L57">a2.php</a> (line 51) and the if method in <a href="https://github.com/opendns/Security_Ninjas_AppSec_Training/blob/master/src/Final/user_details.php#L57">user_details.php</a> at line 57. When the credentials are verified, the session ID cookie is set to a trivially guessable value of a hash of the user name. When the user_details.php page is viewed, it checks the sessionID value and displays a users data based off that value. As the sessionID can be controlled by the user and is easily guessable, private information is disclosed. An excellent primer on Session Management is <a href="https://www.owasp.org/index.php/Session_Management_Cheat_Sheet">here</a>. Session IDs should be long enough to prevent brute force attacks, and random enough to prevent guessing attacks. OWASP has a concise summary of Broken Authentication and Session Management <a href="https://www.owasp.org/index.php/Top_10_2013-A2-Broken_Authentication_and_Session_Management">here</a>.
+							</p>
 							</DIV></li>
 							
 							</ul>

@@ -94,7 +94,11 @@
 							<P>
 							Remove the style 'display:none' in the div with id 'admin_view' to make the hidden div visible. As this function lacks server side access control, you would be able to exploit this functionality.
 							</P>
-							
+
+							<h4>Why?</h4>
+							<p style="text-align:left">
+								Using your browser's developer tools you should be able to display the div as described above as well as change the POST parameters to make yourself admin. The code in <a href="https://github.com/opendns/Security_Ninjas_AppSec_Training/blob/master/src/Final/function_AC.php#L49">function_AC.php</a> simply checks to see whether the client supplied value of is_admin is true before it carries out its operation. Access control should take a default deny policy and users should not be able to influence their authorization levels through client side parameters. OWASP has a concise summary of Function Level Access Control <a href="https://www.owasp.org/index.php/Top_10_2013-A7-Missing_Function_Level_Access_Control">here</a>.
+							</p>
 							</DIV></li>
 							
 							</ul>

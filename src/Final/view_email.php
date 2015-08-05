@@ -142,6 +142,14 @@
 							<P>
 							'update_email.php?new_email=user1@gmail.com&user=user1&Update=Save' is the relative URL and send it as a phishing link to user1 or embed it in a page and make user1 go to that page. If user1 is authenticated, the action would be executed (vice versa for user2). 
 							</P>
+
+							<h4>Why?</h4>
+							<p style="text-align:left">
+								The save action at <a href="https://github.com/opendns/Security_Ninjas_AppSec_Training/blob/master/src/Final/view_email.php#L106">line 106</a> of view_email.php 
+								allows a user to perform a sensitive function without ensuring it was created by the user themselves through the use of a unique token. Per the above Solution, 
+								a user could unknowingly have their email address updated by visiting a malicious site or clicking a malicious link. There are a number of framework level solutions
+								and libraries that help implement CSRF tokens to mitigate this risk.
+								OWASP has a concise summary of Cross Site Request Forgery <a href="https://www.owasp.org/index.php/Top_10_2013-A8-Cross-Site_Request_Forgery_%28CSRF%29">here</a>.							</p>
 							
 							</DIV></li>
 							
