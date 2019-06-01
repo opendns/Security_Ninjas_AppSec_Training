@@ -11,6 +11,7 @@
 		<script src="js/jquery.scrolly.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="js/setup.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -130,21 +131,8 @@
 						<div class="row">
 							<div class="12u">
 							<ul>
-							<li><H5 style="cursor: pointer" onclick="toggleBlock(this, 'hint1');"> Hint 1 </H5>
-							<DIV id="hint1" style="display:none">
-							<P>
-							Can you formulate the parameters needed to complete the query?
-							</P>
-							</DIV></li>
-
-							<li><H5 style="cursor: pointer" onclick="toggleBlock(this, 'solution');"> Solution </H5>
-							<DIV id="solution" style="display:none">
-							<P>
-							'update_email.php?new_email=user1@gmail.com&user=user1&Update=Save' is the relative URL and send it as a phishing link to user1 or embed it in a page and make user1 go to that page. If user1 is authenticated, the action would be executed (vice versa for user2). 
-							</P>
-							
-							</DIV></li>
-							
+								<li><H5 style="cursor: pointer" onclick="DisplayHintOrSolution('a8h1');"> Hint 1 </H5><p id="a8h1"></p></li>
+								<li><H5 style="cursor: pointer" onclick="DisplayHintOrSolution('a8s');"> Solution </H5><p id="a8s"></p></li>
 							</ul>
 							</div>
 						</div>
