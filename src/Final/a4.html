@@ -11,6 +11,7 @@
 		<script src="js/jquery.scrolly.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="js/setup.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -63,29 +64,9 @@
 						<div class="row">
 							<div class="12u">
 							<ul>
-							<li><H5 style="cursor: pointer" onclick="toggleBlock(this, 'hint1');"> Hint 1 </H5>
-							<DIV id="hint1" style="display:none">
-							<P>
-							Can you make out anything from how the document is named?
-							</P>
-							</DIV></li>
-
-							<li><H5 style="cursor: pointer" onclick="toggleBlock(this, 'hint2');"> Hint 2 </H5>
-							<DIV id="hint2" style="display:none">
-							<P>
-							Decode the document name (ASCII-HEX)
-							</P>
-							
-							</DIV></li>
-
-							<li><H5 style="cursor: pointer" onclick="toggleBlock(this, 'solution');"> Solution </H5>
-							<DIV id="solution" style="display:none">
-							<P>
-							636f6e666964656e7469616c.pdf <br>i.e. ASCII-HEX of "confidential"
-							</P>
-							
-							</DIV></li>
-							
+								<li><H5 style="cursor: pointer" onclick="DisplayHintOrSolution('a4h1');"> Hint 1 </H5><p id="a4h1"></p></li>
+								<li><H5 style="cursor: pointer" onclick="DisplayHintOrSolution('a4h2');"> Hint 2 </H5><p id="a4h2"></p></li>
+								<li><H5 style="cursor: pointer" onclick="DisplayHintOrSolution('a4s');"> Solution </H5><p id="a4s"></p></li>
 							</ul>
 							</div>
 						</div>

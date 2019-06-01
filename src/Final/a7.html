@@ -11,6 +11,7 @@
 		<script src="js/jquery.scrolly.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="js/setup.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -82,21 +83,8 @@
 						<div class="row">
 							<div class="12u">
 							<ul>
-							<li><H5 style="cursor: pointer" onclick="toggleBlock(this, 'hint1');"> Hint 1 </H5>
-							<DIV id="hint1" style="display:none">
-							<P>
-							Look at the div with id 'admin_view'
-							</P>
-							</DIV></li>
-
-							<li><H5 style="cursor: pointer" onclick="toggleBlock(this, 'solution');"> Solution </H5>
-							<DIV id="solution" style="display:none">
-							<P>
-							Remove the style 'display:none' in the div with id 'admin_view' to make the hidden div visible. As this function lacks server side access control, you would be able to exploit this functionality.
-							</P>
-							
-							</DIV></li>
-							
+								<li><H5 style="cursor: pointer" onclick="DisplayHintOrSolution('a7h1');"> Hint 1 </H5><p id="a7h1"></p></li>
+								<li><H5 style="cursor: pointer" onclick="DisplayHintOrSolution('a7s');"> Solution </H5><p id="a7s"></p></li>
 							</ul>
 							</div>
 						</div>

@@ -11,6 +11,7 @@
 		<script src="js/jquery.scrolly.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="js/setup.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -68,21 +69,8 @@
 						<div class="row">
 							<div class="12u">
 							<ul>
-							<li><H5 style="cursor: pointer" onclick="toggleBlock(this, 'hint1');"> Hint 1 </H5>
-							<DIV id="hint1" style="display:none">
-							<P>
-							Inject a script in the text box.
-							</P>
-							</DIV></li>
-
-							<li><H5 style="cursor: pointer" onclick="toggleBlock(this, 'solution');"> Solution </H5>
-							<DIV id="solution" style="display:none">
-							<P>
-							Enter any malicious JavaScript code. e.g., &lt;script&gt;window.location.href = &quot;http://opendns.com&quot;;&lt;/script&gt;
-							</P>
-							
-							</DIV></li>
-							
+								<li><H5 style="cursor: pointer" onclick="DisplayHintOrSolution('a3rh1');"> Hint 1 </H5><p id="a3rh1"></p></li>
+								<li><H5 style="cursor: pointer" onclick="DisplayHintOrSolution('a3rs');"> Solution </H5><p id="a3rs"></p></li>
 							</ul>
 							</div>
 						</div>

@@ -11,6 +11,7 @@
 		<script src="js/jquery.scrolly.min.js"></script>
 		<script src="js/skel.min.js"></script>
 		<script src="js/init.js"></script>
+		<script src="js/setup.js"></script>
 		<noscript>
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
@@ -69,30 +70,9 @@
 						<div class="row">
 							<div class="12u">
 							<ul>
-							<li><H5 style="cursor: pointer" onclick="toggleBlock(this, 'hint1');"> Hint 1 </H5>
-							<DIV id="hint1" style="display:none">
-							<P>
-							Look at all the libraries used on this page. Search the web to explore if they have any vulnerabilities. 
-							</P>
-							</DIV></li>
-
-							<li><H5 style="cursor: pointer" onclick="toggleBlock(this, 'hint2');"> Hint 2 </H5>
-							<DIV id="hint2" style="display:none">
-							<P>
-							This page uses jquery-1.6.1 <br><a href="http://www.cvedetails.com/cve/CVE-2011-4969/" target="_blank" >CVE details</a>
-							<br><a href="http://blog.mindedsecurity.com/2011/07/jquery-is-sink.html" target="_blank">Exploit details</a>							
-							</P>
-							
-							</DIV></li>
-
-							<li><H5 style="cursor: pointer" onclick="toggleBlock(this, 'solution');"> Solution </H5>
-							<DIV id="solution" style="display:none">
-							<P>
-							Append "#&lt;img src=x onerror=alert(1)&gt;" at the end of the URL. Note that this proof of concept attack might not pop up an alert if your browser has anti-XSS protections. You might need to refresh the page or wait for a few moments for the pop up to actually show.
-							</P>
-							
-							</DIV></li>
-							
+								<li><H5 style="cursor: pointer" onclick="DisplayHintOrSolution('a9h1');"> Hint 1 </H5><p id="a9h1"></p></li>
+								<li><H5 style="cursor: pointer" onclick="DisplayHintOrSolution('a9h2');"> Hint 2 </H5><p id="a9h2"></p></li>
+								<li><H5 style="cursor: pointer" onclick="DisplayHintOrSolution('a9s');"> Solution </H5><p id="a9s"></p></li>
 							</ul>
 							</div>
 						</div>
