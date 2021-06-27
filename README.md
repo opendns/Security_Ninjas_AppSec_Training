@@ -22,13 +22,12 @@ Setup:
 
 2. Make sure docker has been installed correctly by running ‘docker version’.
 
-3. Start the Application Security Training container by running the following command (I chose port 8899 to avoid port allocation conflicts):
-    'docker run -d -p 8899:80 opendns/security-ninjas'
+3. Build the docker image with tag; ```docker build . -t opendns/security-ninjas```
 
-4. Get the IP address of your container:
-    In my case the command was ‘boot2docker ip’ as I was running docker using boot2docker
+4. Start the Application Security Training container by running the following command (I chose port 8899 to avoid port allocation conflicts):
+    ```docker run -d -p 8899:80 opendns/security-ninjas```
 
-5. Go to your web browser and enter {IP address from step 4}:8899
+5. Go to your web browser and enter localhost:8899, or whichever port mapping that was setup in step 4.
 
 6. The training should be running now.
 	
